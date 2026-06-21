@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Best Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="root"></div>
+    <div id="StartPage">
+        <div id="modes">
+            <div id="LocalMode">Local Mode</div>
+            <div id="LANMode">LAN Mode (still working)</div>
+            <div id="InternetMode">Internet Mode (still working)</div>
+        </div>
+        
+        <div id="others">
+            <div id="GameInstruction">Game Instructions</div>
+            <div id="People">
+                <p id="GamePeople" for="PeopleSet"></p>
+                <input type="range" id="PeopleSet" max="5" min="1" step="1">
+            </div>
+        </div>
+    </div>
+
+    <div id="GameInstructionPage">
+            <h1>Local Mode:</h1>
+            <p>A single or multiplayer mode that player(s) will use the stop watch to approach the target time. The cloest one win.</p>
+            <h1>LAN Mode</h1>
+            <p>Players who connect the same wifi can player together.</p>
+            <p>At first, every device will recieve a target time, each player will need to click their device as a stop watch to reach the target time. After every player finish, the closest one win.</p>
+            <h1>Internet Mode</h1>
+            <p>Same as the LAN Mode, but players can play online.</p>
+            <h1>How to use the stop watch</h1>
+            <p>Stop Watch will start when player firstly click on the device and end via the second click.</p>
+    </div>
+
+    <div id="LocalModePage">
+        <div id="ShowPlayer">player1</div>
+        <div id="TargerTime"></div>
+    </div>
+    <script type="module" src="src/main.jsx"></script>
+    <script src="script.js"></script>
+</body>
+</html>
