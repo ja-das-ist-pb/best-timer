@@ -1,6 +1,9 @@
+import { useNavigate } from "react-router-dom"
+
+export default function GameMode({ fold, type, onClick}) {
+    const navigate = useNavigate() 
 
 
-export function GameMode({ fold, type, onClick}) {
     if (fold) {
         return (
             <div onClick={onClick}>
@@ -20,13 +23,13 @@ export function GameMode({ fold, type, onClick}) {
                 </>)}
             {type === 'lan' && (
                 <>
-                    <div>CREATE</div>
-                    <div>JOIN</div>
+                    <div onClick={() => navigate('/createroom')}>CREATE</div>
+                    <div onClick={() => navigate('/joinroom')}>JOIN</div>
                 </>)}
             {type === 'wifi' && (
                 <>
-                    <div>CREATE</div>
-                    <div>JOIN</div>
+                    <div onClick={() => navigate('/createroom')}>CREATE</div>
+                    <div onClick={() => navigate('/joinroom')}>JOIN</div>
                 </>)}
         </div>
     )

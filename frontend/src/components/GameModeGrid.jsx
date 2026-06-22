@@ -1,8 +1,8 @@
 import { useState } from "react"
-import { GameMode } from "./GameMode.jsx"
+import GameMode from "./GameMode.jsx"
 
 
-export function GameModeGrid() {    
+export default function GameModeGrid() {    
     const [GameModes, setGameModes] = useState([
         {id:'local', fold:true, type:'local'},
         {id:'lan', fold:true, type:'lan'},
