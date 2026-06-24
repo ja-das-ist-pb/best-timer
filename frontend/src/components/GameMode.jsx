@@ -23,13 +23,13 @@ export default function GameMode({ fold, type, onClick}) {
                 </>)}
             {type === 'lan' && (
                 <>
-                    <div onClick={() => navigate('/createroom')}>CREATE</div>
-                    <div onClick={() => navigate('/joinroom')}>JOIN</div>
+                    <div onClick={() => navigate('/createroom', {state : {ConnectionMode : "LAN"}})}>CREATE</div>
+                    <div onClick={() => navigate('/joinroom', {state : {ConnectionMode : "LAN"}})}>JOIN</div>
                 </>)}
             {type === 'wifi' && (
                 <>
-                    <div onClick={() => navigate('/createroom')}>CREATE</div>
-                    <div onClick={() => navigate('/joinroom')}>JOIN</div>
+                    <div onClick={() => navigate('/createroom', {state : {ConnectionMode : "Wifi"}})}>CREATE</div>
+                    <div onClick={() => navigate('/joinroom', {state : {ConnectionMode : "Wifi"}})}>JOIN</div>
                 </>)}
         </div>
     )
