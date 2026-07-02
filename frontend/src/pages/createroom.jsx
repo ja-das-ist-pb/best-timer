@@ -20,6 +20,7 @@ export default function CreateRoom() {
         const room = new Room(PlayerCount, GameMode, MaxPoint, HostName, ConnectionMode)
         const roomdata = await room.ApplyToCreateRoom()
         
+        navigate(`/room/${roomdata.RoomId}`, {state: {ConnectionMode: ConnectionMode}})
     }
 
     return (

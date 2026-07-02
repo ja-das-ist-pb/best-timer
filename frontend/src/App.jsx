@@ -12,6 +12,8 @@ export default function App() {
             <Route path="/createroom" element={<CreateRoom />} />
             <Route path="/joinroom" element={<JionRoom />} />
             <Route path="/room/:roomid" element={<Room />}>
+                <Route index element={<Navigate to="lobby" replace />} />
+
                 <Route path="lobby" element={<Lobby />} />
                 <Route path="game" element={<Game />} />
             </Route>
