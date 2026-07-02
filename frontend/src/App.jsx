@@ -11,7 +11,10 @@ export default function App() {
             <Route path="/" element={<Home />}/>
             <Route path="/createroom" element={<CreateRoom />} />
             <Route path="/joinroom" element={<JionRoom />} />
-            <Route path="/lobby" element={<Lobby />} />
+            <Route path="/room/:roomid" element={<Room />}>
+                <Route path="lobby" element={<Lobby />} />
+                <Route path="game" element={<Game />} />
+            </Route>
         </Routes>
     )
 }
