@@ -4,6 +4,9 @@ import Home from './pages/home.jsx'
 import CreateRoom from './pages/createroom.jsx'
 import JionRoom from './pages/joinroom.jsx'
 import Lobby from './pages/lobby.jsx'
+import Room from './pages/Room.jsx'
+import Game from './pages/game.jsx'
+import Result from './pages/result.jsx'
 
 export default function App() {
     return (
@@ -16,6 +19,7 @@ export default function App() {
 
                 <Route path="lobby" element={<Lobby />} />
                 <Route path="game" element={<Game />} />
+                <Route path="result" element={<Result />} />
             </Route>
         </Routes>
     )

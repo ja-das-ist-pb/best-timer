@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { useNavigate, useLocation} from "react-router-dom"
 import Room from "../models/Room"
+import Player from "../models/Player"
 
 export default function CreateRoom() {
     const navigate = useNavigate()
@@ -19,8 +20,14 @@ export default function CreateRoom() {
     async function FinishCreate() {
         const room = new Room(PlayerCount, GameMode, MaxPoint, HostName, ConnectionMode)
         const roomdata = await room.ApplyToCreateRoom()
+        const player = new Player(HostName)
         
-        navigate(`/room/${roomdata.RoomId}`, {state: {ConnectionMode: ConnectionMode}})
+        navigate(`/room/${roomdata.RoomId}`, {
+            state: {
+                ConnectionMode: ConnectionMode,
+                PlayerDetail: player
+            }
+        })
     }
 
     return (

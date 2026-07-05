@@ -6,6 +6,8 @@ export default class WSManager {
     }
 
     send(data) {
-
+        this.ws.send(JSON.stringify(data))
     }
+
+
 }
